@@ -23,10 +23,13 @@ Windows 10+
 
 ## Usage
 
-To run Bouncing Stream Logo:
+To use Bouncing Stream Logo:
 
 1. Run <code>Bouncing.Stream.Logo.exe</code>
-2. Choose your options in the options menu: color change, speed, and resolution
+2. Choose your options in the options menu: 
+*Color change
+*Speed
+*Resolution
 3. Click the X to close the options menu
 4. OBS: Capture the window using Game Capture and enable Transparency
 5. Resize and rearrange the game capture in OBS as needed
