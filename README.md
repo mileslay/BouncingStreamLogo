@@ -1,84 +1,51 @@
-# \# Bouncing Stream Logo
+# Bouncing Stream Logo
 
-# Displays an image bouncing around the screen like old DVD players
+Displays an image bouncing around the screen like old DVD players
 
-# 
+### Built With
 
-# \### Built With
+Godot 4.6.2
 
-# 
+<!-- GETTING STARTED -->
 
-# Godot 4.6.2
+## Getting Started
 
-# 
+### Prerequisites
 
-# <!-- GETTING STARTED -->
+None
 
-# \## Getting Started
+### Installation
 
-# 
+1. Download the latest release
+2. Place a PNG image you want to use in the same directory as the BouncingStreamLogo.exe
 
-# \### Prerequisites
+<!-- USAGE EXAMPLES -->
 
-# None
+## Usage
 
-# 
+To run Bouncing Stream Logo:
 
-# \### Installation
+1. Execute BouncingStreamLogo.exe
+2. Choose your options in the options menu (color change, speed, resolution)
+3. Click the X to close the options menu
+4. OBS: Capture the window using Game Capture and enable Transparency
+5. Resize and rearrange the game capture in OBS as needed
 
-# 
+To open the Options menu again:
 
-# 1\. Download the latest release
+1. Focus on the BouncingStreamLogo window
+2. Press SHIFT + P
 
-# 2\. Place a PNG image you want to use in the same directory as the BouncingStreamLogo.exe
+To minimize the window, press SHIFT + M or minimize from the taskbar
 
-# 
+To quit, press ALT + F4
 
-# <!-- USAGE EXAMPLES -->
+<!-- LICENSE -->
 
-# \## Usage
+## License
+Distributed under the GNU GPL v3 License. See `LICENSE.txt` for more information.
 
-# To run Bouncing Stream Logo:
 
-# 1\. Execute BouncingStreamLogo.exe
 
-# 2\. Choose your options in the options menu (color change, speed, resolution)
 
-# 3\. Click the X to close the options menu
-
-# 4\. OBS: Capture the window using Game Capture and enable Transparency
-
-# 5\. Resize and rearrange the game capture in OBS as needed
-
-# 
-
-# To open the Options menu again:
-
-# 1\. Focus on the BouncingStreamLogo window
-
-# 2\. Press SHIFT + P
-
-# 
-
-# To minimize the window, press SHIFT + M or minimize from the taskbar
-
-# 
-
-# To quit, press ALT + F4
-
-# 
-
-# 
-
-# <!-- LICENSE -->
-
-# \## License
-
-# 
-
-# Distributed under the GNU GPL v3 License. See `LICENSE.txt` for more information.
-
-# 
-
-# 
 
