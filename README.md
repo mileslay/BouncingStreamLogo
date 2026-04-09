@@ -2,7 +2,7 @@
 
 
 
-Displays an image bouncing around the screen like old DVD players
+Displays an image bouncing around a transparent window like old DVD players for use on livestreams
 
 <video src="https://github.com/user-attachments/assets/09c31bc2-8ab4-4b28-837b-ccf0e7cbdade" 
        autoplay 
