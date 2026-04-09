@@ -1,6 +1,17 @@
 # Bouncing Stream Logo
 
+
+
 Displays an image bouncing around the screen like old DVD players
+
+<video src="https://github.com/user-attachments/assets/09c31bc2-8ab4-4b28-837b-ccf0e7cbdade" 
+       autoplay 
+       loop 
+       muted 
+       playsinline 
+       style="max-width: 100%;">
+</video>
+<img width="303" height="307" alt="options" src="https://github.com/user-attachments/assets/0435d47d-1058-42e3-a42e-a6210339bb97" />
 
 ### Built With
 
