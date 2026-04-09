@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://bmqfqr4j5uk5i"]
+
+[ext_resource type="Script" uid="uid://cqw1pjwk87yw6" path="res://bouncing_stream_logo.gd" id="1_qudnl"]
+
+[node name="Display" type="Window" unique_id=2062768967]
+disable_3d = true
+transparent_bg = true
+oversampling_override = 1.0
+mode = 3
+title = "Bouncing Stream Logo"
+size = Vector2i(1280, 720)
+borderless = true
+transparent = true
+mouse_passthrough = true
+script = ExtResource("1_qudnl")
+
+[node name="Options" type="Window" parent="." unique_id=1625937316]
+disable_3d = true
+oversampling_override = 1.0
+title = "Bouncing Stream Logo Options"
+initial_position = 1
+size = Vector2i(226, 208)
+wrap_controls = true
+unresizable = true
+always_on_top = true
+keep_title_visible = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Options" unique_id=2018869311]
+offset_right = 149.0
+offset_bottom = 31.0
+mouse_filter = 2
+
+[node name="GridContainer" type="GridContainer" parent="Options/MarginContainer" unique_id=1954001757]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="GridContainer" type="GridContainer" parent="Options/MarginContainer/GridContainer" unique_id=1089472025]
+layout_mode = 2
+mouse_filter = 2
+columns = 2
+
+[node name="ColorChangeLabel" type="Label" parent="Options/MarginContainer/GridContainer/GridContainer" unique_id=871401518]
+layout_mode = 2
+text = "Change color"
+
+[node name="ColorChangeCheckButton" type="CheckButton" parent="Options/MarginContainer/GridContainer/GridContainer" unique_id=1737496196]
+layout_mode = 2
+button_pressed = true
+
+[node name="SpeedLabel" type="Label" parent="Options/MarginContainer/GridContainer/GridContainer" unique_id=340799782]
+layout_mode = 2
+text = "Speed"
+
+[node name="SpeedSpinBox" type="SpinBox" parent="Options/MarginContainer/GridContainer/GridContainer" unique_id=1512515040]
+layout_mode = 2
+focus_mode = 2
+min_value = 1.0
+max_value = 999999.0
+value = 400.0
+rounded = true
+allow_greater = true
+alignment = 2
+
+[node name="WidthLabel" type="Label" parent="Options/MarginContainer/GridContainer/GridContainer" unique_id=1014884467]
+layout_mode = 2
+text = "Resolution width"
+
+[node name="WidthSpinBox" type="SpinBox" parent="Options/MarginContainer/GridContainer/GridContainer" unique_id=173762130]
+layout_mode = 2
+focus_mode = 2
+min_value = 1.0
+max_value = 999999.0
+value = 2560.0
+rounded = true
+allow_greater = true
+alignment = 2
+
+[node name="HeightLabel" type="Label" parent="Options/MarginContainer/GridContainer/GridContainer" unique_id=367873752]
+layout_mode = 2
+text = "Resolution height"
+
+[node name="HeightSpinBox" type="SpinBox" parent="Options/MarginContainer/GridContainer/GridContainer" unique_id=2137166510]
+layout_mode = 2
+focus_mode = 2
+max_value = 999999.0
+value = 1440.0
+rounded = true
+allow_greater = true
+allow_lesser = true
+alignment = 2
+
+[node name="HotkeyLabel" type="Label" parent="Options/MarginContainer/GridContainer" unique_id=1461524299]
+layout_mode = 2
+text = "[SHIFT+P] open options
+[SHIFT+M] minimize
+[ALT+F4] close"
+
+[connection signal="close_requested" from="Options" to="." method="_on_options_close_requested"]
+[connection signal="toggled" from="Options/MarginContainer/GridContainer/GridContainer/ColorChangeCheckButton" to="." method="_on_color_change_check_button_toggled"]
+[connection signal="value_changed" from="Options/MarginContainer/GridContainer/GridContainer/SpeedSpinBox" to="." method="_on_speed_spin_box_value_changed"]
+[connection signal="value_changed" from="Options/MarginContainer/GridContainer/GridContainer/WidthSpinBox" to="." method="_on_width_spin_box_value_changed"]
+[connection signal="value_changed" from="Options/MarginContainer/GridContainer/GridContainer/HeightSpinBox" to="." method="_on_height_spin_box_value_changed"]
