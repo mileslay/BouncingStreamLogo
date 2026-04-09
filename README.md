@@ -17,7 +17,7 @@ None
 ### Installation
 
 1. Download the latest [release](https://github.com/mileslay/BouncingStreamLogo/releases/latest)
-2. Place a PNG image you want to use in the same directory as the <code>Bouncing.Stream.Logo.exe<code> and name it <code>image.png</code>
+2. Place a PNG image you want to use in the same directory as the <code>Bouncing.Stream.Logo.exe</code> and name it <code>image.png</code>
 
 <!-- USAGE EXAMPLES -->
 
