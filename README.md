@@ -16,8 +16,8 @@ None
 
 ### Installation
 
-1. Download the latest release
-2. Place a PNG image you want to use in the same directory as the BouncingStreamLogo.exe and name it <code>image.png</code>
+1. Download the latest [release](https://github.com/mileslay/BouncingStreamLogo/releases/latest)
+2. Place a PNG image you want to use in the same directory as the <code>Bouncing.Stream.Logo.exe<code> and name it <code>image.png</code>
 
 <!-- USAGE EXAMPLES -->
 
@@ -25,7 +25,7 @@ None
 
 To run Bouncing Stream Logo:
 
-1. Run <code>BouncingStreamLogo.exe</code>
+1. Run <code>Bouncing.Stream.Logo.exe</code>
 2. Choose your options in the options menu: color change, speed, and resolution
 3. Click the X to close the options menu
 4. OBS: Capture the window using Game Capture and enable Transparency
@@ -34,11 +34,11 @@ To run Bouncing Stream Logo:
 To open the Options menu again:
 
 1. Focus on the BouncingStreamLogo window
-2. Press SHIFT + P
+2. Press <code>SHIFT + P</code>
 
-To minimize the window, press SHIFT + M or minimize from the taskbar
+To minimize the window, press <code>SHIFT + M</code> or minimize from the taskbar
 
-To quit, press ALT + F4
+To quit, press <code>ALT + F4</code>
 
 <!-- LICENSE -->
 
