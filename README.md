@@ -12,7 +12,7 @@ Godot 4.6.2
 
 ### Prerequisites
 
-None
+Windows 10+
 
 ### Installation
 
