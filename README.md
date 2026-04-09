@@ -1,7 +1,5 @@
 # Bouncing Stream Logo
 
-
-
 Displays an image bouncing around a transparent window like old DVD players for use on livestreams
 
 <video src="https://github.com/user-attachments/assets/09c31bc2-8ab4-4b28-837b-ccf0e7cbdade" 
@@ -11,6 +9,7 @@ Displays an image bouncing around a transparent window like old DVD players for 
        playsinline 
        style="max-width: 100%;">
 </video>
+
 <img width="303" height="307" alt="options" src="https://github.com/user-attachments/assets/0435d47d-1058-42e3-a42e-a6210339bb97" />
 
 ### Built With
@@ -27,8 +26,8 @@ Windows 10+
 
 ### Installation
 
-1. Download the latest [release](https://github.com/mileslay/BouncingStreamLogo/releases/latest)
-2. Place a PNG image you want to use in the same directory as the <code>Bouncing.Stream.Logo.exe</code> and name it <code>image.png</code>
+1. Download the [latest release](https://github.com/mileslay/BouncingStreamLogo/releases/latest)
+2. Place a PNG image named <code>image.png</code> in the same directory as <code>Bouncing.Stream.Logo.exe</code>
 
 <!-- USAGE EXAMPLES -->
 
