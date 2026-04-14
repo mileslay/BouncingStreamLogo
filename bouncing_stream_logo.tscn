@@ -19,7 +19,7 @@ disable_3d = true
 oversampling_override = 1.0
 title = "Bouncing Stream Logo Options"
 initial_position = 1
-size = Vector2i(226, 208)
+size = Vector2i(226, 296)
 wrap_controls = true
 unresizable = true
 always_on_top = true
@@ -52,6 +52,7 @@ layout_mode = 2
 text = "Speed"
 
 [node name="SpeedSpinBox" type="SpinBox" parent="Options/MarginContainer/GridContainer/GridContainer" unique_id=1512515040]
+clip_contents = true
 layout_mode = 2
 focus_mode = 2
 min_value = 1.0
@@ -60,10 +61,11 @@ value = 400.0
 rounded = true
 allow_greater = true
 alignment = 2
+custom_arrow_step = 5.0
 
 [node name="WidthLabel" type="Label" parent="Options/MarginContainer/GridContainer/GridContainer" unique_id=1014884467]
 layout_mode = 2
-text = "Resolution width"
+text = "Area width"
 
 [node name="WidthSpinBox" type="SpinBox" parent="Options/MarginContainer/GridContainer/GridContainer" unique_id=173762130]
 layout_mode = 2
@@ -74,10 +76,11 @@ value = 2560.0
 rounded = true
 allow_greater = true
 alignment = 2
+suffix = "px"
 
 [node name="HeightLabel" type="Label" parent="Options/MarginContainer/GridContainer/GridContainer" unique_id=367873752]
 layout_mode = 2
-text = "Resolution height"
+text = "Area height"
 
 [node name="HeightSpinBox" type="SpinBox" parent="Options/MarginContainer/GridContainer/GridContainer" unique_id=2137166510]
 layout_mode = 2
@@ -88,15 +91,48 @@ rounded = true
 allow_greater = true
 allow_lesser = true
 alignment = 2
+suffix = "px"
+
+[node name="ScaleLabel" type="Label" parent="Options/MarginContainer/GridContainer/GridContainer" unique_id=1213334903]
+layout_mode = 2
+text = "Image scale"
+
+[node name="ScaleSpinBox" type="SpinBox" parent="Options/MarginContainer/GridContainer/GridContainer" unique_id=138641414]
+layout_mode = 2
+focus_mode = 2
+max_value = 999999.0
+step = 0.001
+value = 1.0
+allow_greater = true
+alignment = 2
+prefix = "x"
+custom_arrow_step = 0.1
+
+[node name="AnimationSpeedLabel" type="Label" parent="Options/MarginContainer/GridContainer/GridContainer" unique_id=586349123]
+layout_mode = 2
+text = "Animation speed"
+
+[node name="AnimationSpeedSpinBox" type="SpinBox" parent="Options/MarginContainer/GridContainer/GridContainer" unique_id=228855738]
+layout_mode = 2
+focus_mode = 2
+max_value = 300.0
+step = 0.001
+value = 12.0
+allow_greater = true
+alignment = 2
+suffix = "fps"
+custom_arrow_step = 1.0
 
 [node name="HotkeyLabel" type="Label" parent="Options/MarginContainer/GridContainer" unique_id=1461524299]
 layout_mode = 2
-text = "[SHIFT+P] open options
-[SHIFT+M] minimize
-[ALT+F4] close"
+text = "[O] Options
+[M] Minimize
+[ALT+F4] Close"
 
 [connection signal="close_requested" from="Options" to="." method="_on_options_close_requested"]
 [connection signal="toggled" from="Options/MarginContainer/GridContainer/GridContainer/ColorChangeCheckButton" to="." method="_on_color_change_check_button_toggled"]
 [connection signal="value_changed" from="Options/MarginContainer/GridContainer/GridContainer/SpeedSpinBox" to="." method="_on_speed_spin_box_value_changed"]
 [connection signal="value_changed" from="Options/MarginContainer/GridContainer/GridContainer/WidthSpinBox" to="." method="_on_width_spin_box_value_changed"]
 [connection signal="value_changed" from="Options/MarginContainer/GridContainer/GridContainer/HeightSpinBox" to="." method="_on_height_spin_box_value_changed"]
+[connection signal="value_changed" from="Options/MarginContainer/GridContainer/GridContainer/ScaleSpinBox" to="." method="_on_scale_spin_box_value_changed"]
+[connection signal="value_changed" from="Options/MarginContainer/GridContainer/GridContainer/AnimationSpeedSpinBox" to="." method="_on_animation_speed_spin_box_value_changed"]

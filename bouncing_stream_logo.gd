@@ -2,6 +2,7 @@ extends Window
 
 @onready var options: Window = $Options
 var image: Node2D
+var half_size: Vector2
 
 @export var speed: float = 400.0
 @export var change_color_on_bounce: bool = true
@@ -11,15 +12,30 @@ func _ready() -> void:
 	size.x = 2560
 	size.y = 1440
 	
-	var image_path = "res://image.png"
-	if FileAccess.file_exists(image_path):
+	var gif_path = "res://image.gif"
+	var png_path = "res://image.png"
+	if FileAccess.file_exists(gif_path):
+		image = AnimatedSprite2D.new()
+		image.sprite_frames = GifManager.sprite_frames_from_file(gif_path)
+		image.play(image.sprite_frames.get_animation_names()[0])
+		update_half_size()
+		$Options/MarginContainer/GridContainer/GridContainer/AnimationSpeedSpinBox.value \
+			= image.sprite_frames.get_animation_speed(image.sprite_frames.get_animation_names()[0])
+		add_child(image)
+	elif FileAccess.file_exists(png_path):
+		$Options/MarginContainer/GridContainer/GridContainer/AnimationSpeedSpinBox \
+			.value = 0
+		$Options/MarginContainer/GridContainer/GridContainer/AnimationSpeedSpinBox \
+			.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		$Options/MarginContainer/GridContainer/GridContainer/AnimationSpeedSpinBox \
+			.editable = false
 		image = Sprite2D.new()
-		image.texture = load(image_path)
+		image.texture = load(png_path)
+		update_half_size()
 		add_child(image)
 	else:
-		push_error("File 'icon.png' not found in root directory.")
+		push_error("Files 'image.gif' and 'image.png' not found in root directory.")
 	
-	var half_size = (image.texture.get_size() * image.scale) / 2.0
 	image.position.x = randi_range(0, int(size.x - half_size.x))
 	image.position.y = randi_range(0, int(size.y - half_size.y))
 	
@@ -27,8 +43,6 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	image.position += velocity * speed * delta
-	
-	var half_size = (image.texture.get_size() * image.scale) / 2.0
 	
 	# horizontal bounce
 	if image.position.x + half_size.x >= size.x:
@@ -50,14 +64,21 @@ func _process(delta: float) -> void:
 		velocity.y *= -1
 		change_color()
 
+func update_half_size() -> void:
+	if image is AnimatedSprite2D:
+		half_size = image.sprite_frames.get_frame_texture(
+				image.sprite_frames.get_animation_names()[0], 0).get_size() * image.scale / 2.0
+	elif image is Sprite2D:
+		half_size = (image.texture.get_size() * image.scale) / 2.0
+
 func change_color() -> void:
 	if(change_color_on_bounce):
 		image.modulate = Color(randf(), randf(), randf(), 1.0)
 
 func _unhandled_key_input(event: InputEvent) -> void:
-	if event.keycode == KEY_P and event.shift_pressed and event.pressed:
+	if event.keycode == KEY_O and event.pressed:
 		_on_open_options_hotkey()
-	elif event.keycode == KEY_M and event.shift_pressed and event.pressed:
+	elif event.keycode == KEY_M and event.pressed:
 		_on_minimize_hotkey()
 
 func _on_color_change_check_button_toggled(toggled_on: bool) -> void:
@@ -73,6 +94,15 @@ func _on_width_spin_box_value_changed(value: float) -> void:
 
 func _on_height_spin_box_value_changed(value: float) -> void:
 	size.y = int(value)
+
+func _on_animation_speed_spin_box_value_changed(value: float) -> void:
+	if image is AnimatedSprite2D:
+		image.sprite_frames.set_animation_speed(
+			image.sprite_frames.get_animation_names()[0], value)
+
+func _on_scale_spin_box_value_changed(value: float) -> void:
+	image.scale = Vector2(value, value)
+	update_half_size()
 
 func _on_open_options_hotkey() -> void:
 	options.show()

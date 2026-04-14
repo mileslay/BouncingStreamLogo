@@ -15,7 +15,7 @@ run/main_scene="res://bouncing_stream_logo.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 run/max_fps=60
 boot_splash/show_image=false
-config/icon="uid://j5born67s6ro"
+config/icon="uid://co7q0esffdosa"
 
 [display]
 
