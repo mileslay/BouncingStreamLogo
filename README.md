@@ -28,13 +28,14 @@ Windows 10+
 ### Installation
 
 1. Download the [latest release](https://github.com/mileslay/BouncingStreamLogo/releases/latest)
-2. Place an animated GIF or a static PNG image named <code>image.gif</code> or <code>image.png</code> respectively in the same directory as <code>Bouncing.Stream.Logo.exe</code>. GIFs will be used first.
+2. Extract the contents of the archive
+3. Place an animated GIF or a static PNG image named <code>image.gif</code> or <code>image.png</code> respectively in the same directory as <code>BouncingStreamLogo.exe</code>. GIFs will be used first.
 
 ## Usage
 
 To use Bouncing Stream Logo:
 
-1. Run <code>Bouncing.Stream.Logo.exe</code>
+1. Run <code>BouncingStreamLogo.exe</code>
 2. Choose your options in the options menu: 
 	1. Color change
 	2. Speed
